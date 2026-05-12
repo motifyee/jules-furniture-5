@@ -1,0 +1,49 @@
+/* brand-personalities/bold-contemporary.css */
+
+:root {
+  /* Colors */
+  --color-background: #FFFFFF; /* Clean white */
+  --color-surface: #F5F5F5; /* Light neutral card */
+  --color-surface-raised: #FFFFFF;
+  --color-text-primary: #0F0F0F; /* Near-black */
+  --color-text-secondary: #6B6B6B; /* Neutral grey */
+  --color-accent: #1A1A1A; /* Near-black CTAs */
+  --color-accent-hover: #000000;
+  --color-border: #E0E0E0; /* Clean neutral */
+  --color-accent-alt: #D13131; /* Bold red secondary */
+
+  /* Typography */
+  --font-display: "Barlow Condensed", "Space Grotesk", sans-serif;
+  --font-body: "IBM Plex Sans", "Inter", sans-serif;
+  --font-arabic: "Tajawal", sans-serif;
+
+  /* Form/Structure */
+  --radius-xs: 0;
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+  --radius-pill: 0;
+
+  /* Shadows */
+  --shadow-sm: none;
+  --shadow-hover: 8px 8px 0px rgba(15, 15, 15, 0.1);
+
+  /* Motion */
+  --dur-normal: 100ms;
+  --dur-pour: 150ms;
+  --ease-pour: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Typography styles */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.product-card {
+  border: 1px solid var(--color-border);
+}
+
+.product-card:hover {
+  transform: translate(-4px, -4px);
+}

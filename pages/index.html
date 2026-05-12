@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Damietta Heritage - Furniture Gallery</title>
+  <link rel="stylesheet" href="../base.css">
+  <link rel="stylesheet" href="../layout.css">
+  <link rel="stylesheet" href="../components.css">
+  <!-- Personality override example -->
+  <link rel="stylesheet" href="../brand-personalities/artisan-heritage.css">
+  <!-- RTL Support (Disabled by default, toggle dir="rtl" to enable) -->
+  <link rel="stylesheet" href="../rtl.css">
+  <style>
+    /* Inline specific to index */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      position: relative;
+      background-color: var(--color-background);
+    }
+    .hero__bg {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+    .hero__overlay {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: linear-gradient(to top, rgba(42,31,20,0.8), rgba(42,31,20,0) 60%);
+      z-index: 1;
+    }
+    .hero__content {
+      position: relative;
+      z-index: 2;
+      padding-block-end: var(--space-16);
+      color: #fff;
+    }
+    .hero__title {
+      font-size: var(--text-display);
+      margin-block-end: var(--space-4);
+      max-width: 800px;
+    }
+    .brand-statement {
+      background: var(--color-surface);
+      text-align: center;
+      padding-block: var(--space-32);
+    }
+    .brand-statement__text {
+      font-family: var(--font-display);
+      font-size: var(--text-3xl);
+      letter-spacing: 0.02em;
+      max-width: 900px;
+      margin-inline: auto;
+    }
+    .craft-story {
+      display: grid;
+      gap: var(--space-8);
+    }
+    @media (min-width: 768px) {
+      .craft-story {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .craft-story__step img {
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      border-radius: var(--radius-md);
+      margin-block-end: var(--space-4);
+    }
+    .nav {
+      position: absolute;
+      top: 0; left: 0; width: 100%;
+      z-index: 10;
+      padding: var(--space-6);
+      display: flex;
+      justify-content: space-between;
+      color: #fff;
+    }
+    .nav a {
+      color: #fff;
+    }
+    .nav__links {
+      display: flex;
+      gap: var(--space-6);
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav__logo">Damietta Crafts</div>
+    <div class="nav__links">
+      <a href="gallery.html">Shop</a>
+      <a href="collections.html">Collections</a>
+      <a href="custom-order.html">Custom Orders</a>
+      <a href="about.html">About</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <!-- LCP image should be preloaded, eager -->
+    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=2000" alt="Styled living room with Damietta furniture" class="hero__bg" loading="eager">
+    <div class="hero__overlay"></div>
+    <div class="container hero__content">
+      <h1 class="hero__title">Crafted in Damietta. Built for a lifetime.</h1>
+      <p class="hero__subtitle">Where world-class woodworking meets Egyptian heritage.</p>
+      <div style="margin-top: var(--space-6)">
+        <a href="gallery.html" class="btn">Explore the Collection</a>
+        <a href="showroom.html" class="btn btn--outline" style="color:#fff; border-color:#fff">Book a Showroom Visit</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="brand-statement">
+    <div class="container">
+      <p class="brand-statement__text">Every joint hand-cut. Every finish hand-applied. Every piece, forever.</p>
+    </div>
+  </section>
+
+  <section class="section container">
+    <h2 style="margin-bottom: var(--space-8)">Shop by Room</h2>
+    <div class="grid grid--3-col">
+      <a href="gallery.html?room=living" class="category-tile">
+        <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=600" alt="Living Room" loading="lazy">
+        <div class="category-tile__content">
+          <h3 class="category-tile__title">Living Room</h3>
+          <p>24 Pieces</p>
+        </div>
+      </a>
+      <a href="gallery.html?room=bedroom" class="category-tile">
+        <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&w=600" alt="Bedroom" loading="lazy">
+        <div class="category-tile__content">
+          <h3 class="category-tile__title">Bedroom</h3>
+          <p>18 Pieces</p>
+        </div>
+      </a>
+      <a href="gallery.html?room=dining" class="category-tile">
+        <img src="https://images.unsplash.com/photo-1617806118233-18e1c094f129?auto=format&fit=crop&w=600" alt="Dining Room" loading="lazy">
+        <div class="category-tile__content">
+          <h3 class="category-tile__title">Dining Room</h3>
+          <p>32 Pieces</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section class="section container">
+    <h2 style="margin-bottom: var(--space-8)">Made in Damietta. Known to the world.</h2>
+    <div class="craft-story">
+      <div class="craft-story__step">
+        <img src="https://images.unsplash.com/photo-1563453392212-326f5e854473?auto=format&fit=crop&w=500" alt="Timber selection" loading="lazy">
+        <h3>1. The Material</h3>
+        <p>We source only the finest solid woods, inspected grain by grain.</p>
+      </div>
+      <div class="craft-story__step">
+        <img src="https://images.unsplash.com/photo-1505069270275-c0817b3eb164?auto=format&fit=crop&w=500" alt="Joinery" loading="lazy">
+        <h3>2. The Making</h3>
+        <p>Decades of master craftsmanship in every mortise and tenon.</p>
+      </div>
+      <div class="craft-story__step">
+        <img src="https://images.unsplash.com/photo-1594026112284-02bb6f3352fe?auto=format&fit=crop&w=500" alt="Finished piece" loading="lazy">
+        <h3>3. The Piece</h3>
+        <p>A heritage piece, delivered and assembled in your home.</p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

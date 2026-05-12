@@ -1,0 +1,50 @@
+/* rtl.css */
+
+[dir="rtl"] {
+  text-align: start;
+  font-family: var(--font-arabic), var(--font-body);
+}
+
+[dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3, [dir="rtl"] h4, [dir="rtl"] h5, [dir="rtl"] h6 {
+  font-family: var(--font-arabic), var(--font-display);
+}
+
+[dir="rtl"] .product-card__badge {
+  left: auto;
+  right: var(--space-3);
+}
+
+[dir="rtl"] .product-card__wishlist {
+  right: auto;
+  left: var(--space-3);
+}
+
+[dir="rtl"] .review-card__reply {
+  border-inline-start: 4px solid var(--color-accent);
+  border-inline-end: none;
+}
+
+[dir="rtl"] .consult-widget {
+  right: auto;
+  left: var(--space-6);
+}
+
+[dir="rtl"] .breadcrumb__separator {
+  transform: scaleX(-1);
+  display: inline-block;
+}
+
+/* Base adjustment for Arabic */
+[dir="rtl"] body {
+  font-size: 105%;
+  line-height: 1.8; /* Descenders need vertical space */
+}
+
+/* Make sure logical properties are used appropriately where we didn't in components */
+/* e.g., margin-left -> margin-inline-start, but we've avoided left/right largely except for absolute positioning */
+
+/* RTL Nav shift */
+[dir="rtl"] .nav__logo {
+  margin-inline-end: auto;
+  margin-inline-start: 0;
+}

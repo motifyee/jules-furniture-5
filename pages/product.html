@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Malak Walnut Dining Table - Damietta Heritage</title>
+  <link rel="stylesheet" href="../base.css">
+  <link rel="stylesheet" href="../layout.css">
+  <link rel="stylesheet" href="../components.css">
+  <link rel="stylesheet" href="../brand-personalities/artisan-heritage.css">
+  <style>
+    .pdp-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-8);
+    }
+    @media (min-width: 1024px) {
+      .pdp-layout {
+        grid-template-columns: 55% 45%;
+      }
+    }
+    .pdp-gallery {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+    }
+    .pdp-gallery__main {
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      border-radius: var(--radius-md);
+      cursor: zoom-in;
+    }
+    .pdp-gallery__thumbs {
+      display: flex;
+      gap: var(--space-2);
+      overflow-x: auto;
+    }
+    .pdp-gallery__thumb {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      opacity: 0.6;
+      transition: opacity 0.2s;
+    }
+    .pdp-gallery__thumb:hover, .pdp-gallery__thumb[aria-current="true"] {
+      opacity: 1;
+      border: 2px solid var(--color-accent);
+    }
+    .breadcrumb {
+      font-size: var(--text-sm);
+      color: var(--color-text-secondary);
+      margin-block-end: var(--space-4);
+    }
+    .breadcrumb a { color: inherit; }
+    .specs-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-block-start: var(--space-4);
+    }
+    .specs-table th, .specs-table td {
+      text-align: start;
+      padding: var(--space-3) 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .specs-table th {
+      color: var(--color-text-secondary);
+      font-weight: normal;
+      width: 40%;
+    }
+    details {
+      border-bottom: 1px solid var(--color-border);
+      padding-block: var(--space-4);
+    }
+    summary {
+      cursor: pointer;
+      font-family: var(--font-display);
+      font-size: var(--text-lg);
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+    }
+    summary::after {
+      content: '+';
+    }
+    details[open] summary::after {
+      content: '-';
+    }
+    .trust-strip {
+      display: flex;
+      gap: var(--space-4);
+      background: var(--color-surface);
+      padding: var(--space-4);
+      border-radius: var(--radius-md);
+      margin-block-start: var(--space-6);
+    }
+    .trust-strip__item {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-size: var(--text-sm);
+    }
+  </style>
+</head>
+<body>
+  <nav style="padding: var(--space-6); background: var(--color-surface); border-bottom: 1px solid var(--color-border)">
+    <div class="nav__logo"><a href="index.html">Damietta Crafts</a></div>
+  </nav>
+
+  <div class="container section">
+    <nav aria-label="Breadcrumb" class="breadcrumb">
+      <a href="index.html">Home</a> <span class="breadcrumb__separator">></span>
+      <a href="gallery.html?room=dining">Dining Room</a> <span class="breadcrumb__separator">></span>
+      <a href="gallery.html?type=tables">Tables</a> <span class="breadcrumb__separator">></span>
+      <span aria-current="page">Malak Walnut Dining Table</span>
+    </nav>
+
+    <div class="pdp-layout">
+      <!-- Gallery -->
+      <div class="pdp-gallery" role="region" aria-label="Product photos">
+        <img src="https://images.unsplash.com/photo-1604578762246-41134e37f9cc?auto=format&fit=crop&w=1000" alt="Malak Walnut Dining Table shown in styled dining room" class="pdp-gallery__main" id="main-image">
+        <div class="pdp-gallery__thumbs">
+          <img src="https://images.unsplash.com/photo-1604578762246-41134e37f9cc?auto=format&fit=crop&w=200" alt="Thumbnail 1: Lifestyle" class="pdp-gallery__thumb" aria-current="true" tabindex="0">
+          <img src="https://images.unsplash.com/photo-1577140917170-285929fb55b7?auto=format&fit=crop&w=200" alt="Thumbnail 2: Studio isolated" class="pdp-gallery__thumb" tabindex="0">
+          <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=200" alt="Thumbnail 3: Texture close up of walnut grain" class="pdp-gallery__thumb" tabindex="0">
+        </div>
+      </div>
+
+      <!-- Info -->
+      <div class="pdp-info">
+        <span class="product-card__badge" style="position:relative; top:0; left:0; display:inline-block; margin-block-end:var(--space-4); border-top: 3px solid var(--material-walnut)">Solid Walnut</span>
+        <h1 style="font-size: var(--text-4xl); margin-block-end: var(--space-2)">Malak Dining Table</h1>
+        <p style="font-size: var(--text-lg); color: var(--color-text-secondary); margin-block-end: var(--space-4)">A solid walnut table built for meals that last for hours and pieces that last for decades.</p>
+
+        <div style="display:flex; align-items:center; gap:var(--space-2); margin-block-end:var(--space-6)">
+          <span style="color:var(--color-accent)">★★★★★</span>
+          <a href="#reviews" style="font-size:var(--text-sm)">4.8 (24 reviews)</a>
+        </div>
+
+        <div style="font-size: var(--text-3xl); font-weight: bold; margin-block-end: var(--space-2)">EGP 24,000</div>
+        <div style="font-size: var(--text-sm); color: var(--color-text-secondary); margin-block-end: var(--space-6)">Or pay in 6 installments of 4,000 EGP via Vodafone Cash or InstaPay.</div>
+
+        <div style="margin-block-end: var(--space-6)">
+          <div style="font-family: var(--font-label); text-transform: uppercase; font-size: var(--text-sm); margin-block-end: var(--space-2)">Size</div>
+          <div style="display:flex; gap:var(--space-2)">
+            <button class="btn btn--outline" aria-pressed="false">160cm (Seats 6)</button>
+            <button class="btn" aria-pressed="true">180cm (Seats 8)</button>
+            <button class="btn btn--outline" aria-pressed="false">200cm (Seats 10)</button>
+          </div>
+          <a href="custom-order.html" style="font-size: var(--text-sm); display:inline-block; margin-block-start: var(--space-2)">Need a custom size?</a>
+        </div>
+
+        <div style="margin-block-end: var(--space-8)">
+          <div style="font-family: var(--font-label); text-transform: uppercase; font-size: var(--text-sm); margin-block-end: var(--space-2)">Material</div>
+          <div class="swatch-grid" role="radiogroup" aria-label="Select Material">
+            <div class="swatch-item" role="radio" aria-checked="true" aria-label="Solid Walnut" tabindex="0">
+              <img src="https://images.unsplash.com/photo-1546484475-7f7bd55792da?auto=format&fit=crop&w=100" alt="Solid Walnut texture swatch">
+            </div>
+            <div class="swatch-item" role="radio" aria-checked="false" aria-label="Solid Oak" tabindex="0">
+              <img src="https://images.unsplash.com/photo-1546484396-fb3fc6f95f98?auto=format&fit=crop&w=100" alt="Solid Oak texture swatch">
+            </div>
+          </div>
+        </div>
+
+        <button class="btn" style="width: 100%; margin-block-end: var(--space-4)">Add to Cart</button>
+        <button class="btn btn--outline" style="width: 100%; margin-block-end: var(--space-6)">Save to Wishlist</button>
+
+        <!-- Trust Strip -->
+        <div class="trust-strip">
+          <div class="trust-strip__item">
+            <span>🛡️</span> 30-day return policy
+          </div>
+          <div class="trust-strip__item">
+            <span>🚚</span> Free white-glove delivery
+          </div>
+          <div class="trust-strip__item">
+            <span>✨</span> 2-year warranty
+          </div>
+        </div>
+        <p style="font-size: var(--text-sm); color: var(--color-text-secondary); margin-block-start: var(--space-2)">If it doesn't fit your space, we'll arrange pickup within 30 days.</p>
+
+        <div style="margin-block-start: var(--space-8)">
+          <details>
+            <summary>Dimensions & Fit</summary>
+            <div style="padding-block: var(--space-4)">
+              <div class="dimension-diagram">
+                <!-- Placeholder for SVG Dimension Diagram -->
+                <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="50" y="50" width="300" height="20" fill="none" stroke="currentColor" stroke-width="2"/>
+                  <rect x="70" y="70" width="20" height="100" fill="none" stroke="currentColor" stroke-width="2"/>
+                  <rect x="310" y="70" width="20" height="100" fill="none" stroke="currentColor" stroke-width="2"/>
+                  <text x="200" y="40" text-anchor="middle" font-family="sans-serif" font-size="12">W: 180cm</text>
+                  <text x="30" y="120" text-anchor="end" font-family="sans-serif" font-size="12">H: 76cm</text>
+                </svg>
+              </div>
+              <p style="margin-block-start: var(--space-4)"><strong>Fits through a standard 80cm doorway.</strong></p>
+            </div>
+          </details>
+          <details>
+            <summary>Specifications</summary>
+            <table class="specs-table">
+              <tbody>
+                <tr><th>Wood type:</th><td>Solid Walnut (FSC-certified)</td></tr>
+                <tr><th>Finish:</th><td>Hand-applied matte oil</td></tr>
+                <tr><th>Joint type:</th><td>Mortise and tenon, hand-cut</td></tr>
+                <tr><th>Dimensions:</th><td>180cm W x 90cm D x 76cm H</td></tr>
+                <tr><th>Made in:</th><td>Damietta, Egypt</td></tr>
+                <tr><th>Production:</th><td>Small batch — 2 weeks typical lead time</td></tr>
+              </tbody>
+            </table>
+          </details>
+          <details>
+            <summary>Care & Durability</summary>
+            <div style="padding-block: var(--space-4)">
+              <p>Our pieces are built to last 20+ years with proper care.</p>
+              <ul>
+                <li>Daily Care: Wipe with a damp cloth, dry immediately.</li>
+                <li>Wood Maintenance: Re-apply oil every 6 months to maintain luster.</li>
+              </ul>
+            </div>
+          </details>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <a href="https://wa.me/201000000000" class="consult-widget" aria-label="Chat with us on WhatsApp">
+    💬 Chat with an Expert
+  </a>
+</body>
+</html>

@@ -1,0 +1,55 @@
+/* brand-personalities/luxe-editorial.css */
+
+:root {
+  /* Colors */
+  --color-background: #0C0A08; /* Warm obsidian */
+  --color-surface: #161210; /* Dark warm card */
+  --color-text-primary: #F5F0E8; /* Warm ivory */
+  --color-text-secondary: #A89880; /* Muted warm gold-grey */
+  --color-accent: #C9903A; /* Deep gold */
+  --color-accent-hover: #E0A84A;
+  --color-border: #2A2420; /* Dark warm divider */
+  --color-surface-raised: #1A1614;
+
+  /* Typography */
+  --font-display: "Cormorant Garamond", "Bodoni Moda", serif;
+  --font-body: "Jost", "Lato", sans-serif;
+  --font-arabic: "Scheherazade New", serif;
+
+  /* Form/Structure */
+  --radius-xs: 0;
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+  --radius-pill: 0;
+
+  /* Spacing Multiplier Approach */
+  --space-1: calc(4px * 1.5);
+  --space-2: calc(8px * 1.5);
+  --space-3: calc(12px * 1.5);
+  --space-4: calc(16px * 1.5);
+  --space-6: calc(24px * 1.5);
+  --space-8: calc(32px * 1.5);
+
+  /* Shadows */
+  --shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-hover: 0 24px 64px rgba(0, 0, 0, 0.6), 0 4px 12px rgba(0, 0, 0, 0.4);
+
+  /* Motion */
+  --dur-normal: 400ms;
+  --dur-pour: 600ms;
+  --dur-reveal: 700ms;
+  --ease-pour: cubic-bezier(0.25, 1, 0.25, 1);
+}
+
+/* UI Adapts */
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-background);
+}
+
+.product-card__price {
+  color: var(--color-accent);
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+}

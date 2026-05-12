@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Room Builder - Damietta Heritage</title>
+  <link rel="stylesheet" href="../base.css">
+  <link rel="stylesheet" href="../layout.css">
+  <link rel="stylesheet" href="../components.css">
+  <link rel="stylesheet" href="../brand-personalities/artisan-heritage.css">
+  <style>
+    .quiz-container { max-width: 800px; margin-inline: auto; text-align: center; }
+    .quiz-step { padding: var(--space-8); background: var(--color-surface); border-radius: var(--radius-lg); }
+    .quiz-options { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4); margin-top: var(--space-6); }
+    @media (min-width: 768px) { .quiz-options { grid-template-columns: repeat(4, 1fr); } }
+    .quiz-option { border: 2px solid var(--color-border); padding: var(--space-4); border-radius: var(--radius-md); cursor: pointer; transition: border-color 0.2s; }
+    .quiz-option:hover { border-color: var(--color-accent); }
+  </style>
+</head>
+<body>
+  <nav style="padding: var(--space-6); background: var(--color-surface); border-bottom: 1px solid var(--color-border)">
+    <div class="nav__logo"><a href="index.html">Damietta Crafts</a></div>
+  </nav>
+  <div class="container section quiz-container">
+    <div class="quiz-step">
+      <h2>What room are you furnishing?</h2>
+      <p>Tell us about your space. We'll find the right pieces.</p>
+      <div class="quiz-options">
+        <div class="quiz-option">Living Room</div>
+        <div class="quiz-option">Bedroom</div>
+        <div class="quiz-option">Dining Room</div>
+        <div class="quiz-option">Office</div>
+      </div>
+      <div style="margin-top: var(--space-8)">
+        <button class="btn btn--outline" disabled>Back</button>
+        <button class="btn">Next</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
