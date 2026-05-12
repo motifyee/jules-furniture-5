@@ -10,20 +10,61 @@
   <link rel="stylesheet" href="../brand-personalities/artisan-heritage.css">
 </head>
 <body>
-  <nav style="padding: var(--space-6); background: var(--color-surface); border-bottom: 1px solid var(--color-border)">
-    <div class="nav__logo"><a href="index.html">Damietta Crafts</a></div>
+  <nav class="top-nav">
+    <div class="top-nav__logo">
+      <a href="index.html">Damietta Crafts</a>
+    </div>
+    <div class="top-nav__links">
+      <a href="gallery.html">Shop</a>
+      <a href="collections.html">Collections</a>
+      <a href="custom-order.html">Custom Orders</a>
+      <a href="about.html">About</a>
+      <a href="showroom.html">Showroom</a>
+    </div>
+    <div class="top-nav__actions">
+      <button class="top-nav__action" aria-label="Search">🔍</button>
+      <a href="#" class="top-nav__action" aria-label="Wishlist">♥</a>
+      <a href="#" class="top-nav__action" aria-label="Cart">🛒</a>
+    </div>
   </nav>
+
   <div class="container section">
     <h1>About Our Craft</h1>
-    <div class="grid grid--2-col" style="margin-top: var(--space-8); align-items: center;">
+    <div class="grid grid--2-col u-mt-8 u-items-center">
       <div>
-        <p>Damietta has been Egypt's furniture capital for over 60 years. We carry that forward.</p>
+        <p class="u-mb-4">Damietta has been Egypt's furniture capital for over 60 years. We carry that forward.</p>
         <p>Our workshop combines traditional joinery techniques with modern precision, ensuring every piece outlasts trends and generations.</p>
       </div>
       <div>
-        <img src="https://images.unsplash.com/photo-1581428982868-e410dd4b1a20?auto=format&fit=crop&w=800" alt="Craftsman working on wood" style="border-radius: var(--radius-md);">
+        <picture>
+          <source srcset="https://images.unsplash.com/photo-1581428982868-e410dd4b1a20?auto=format&fit=crop&w=800&fm=avif" type="image/avif">
+          <img src="https://images.unsplash.com/photo-1581428982868-e410dd4b1a20?auto=format&fit=crop&w=800" alt="Craftsman working on wood" loading="lazy" style="border-radius: var(--radius-md);">
+        </picture>
       </div>
     </div>
   </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__title">Damietta Crafts</div>
+          <p class="u-text-secondary u-mb-6" style="max-width: 300px;">Handmade in Damietta, Egypt.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <nav class="mobile-tab-bar">
+    <a href="index.html" class="mobile-tab-bar__item">
+      <span class="mobile-tab-bar__icon">🏠</span>
+      <span>Home</span>
+    </a>
+    <a href="gallery.html" class="mobile-tab-bar__item">
+      <span class="mobile-tab-bar__icon">🛋️</span>
+      <span>Shop</span>
+    </a>
+  </nav>
+  <script src="../main.js"></script>
 </body>
 </html>

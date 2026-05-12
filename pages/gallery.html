@@ -44,12 +44,26 @@
   </style>
 </head>
 <body>
-  <nav style="padding: var(--space-6); background: var(--color-surface); display:flex; justify-content:space-between; border-bottom: 1px solid var(--color-border)">
-    <div class="nav__logo"><a href="index.html">Damietta Crafts</a></div>
+  <nav class="top-nav">
+    <div class="top-nav__logo">
+      <a href="index.html">Damietta Crafts</a>
+    </div>
+    <div class="top-nav__links">
+      <a href="gallery.html">Shop</a>
+      <a href="collections.html">Collections</a>
+      <a href="custom-order.html">Custom Orders</a>
+      <a href="about.html">About</a>
+      <a href="showroom.html">Showroom</a>
+    </div>
+    <div class="top-nav__actions">
+      <button class="top-nav__action" aria-label="Search">🔍</button>
+      <a href="#" class="top-nav__action" aria-label="Wishlist">♥</a>
+      <a href="#" class="top-nav__action" aria-label="Cart">🛒</a>
+    </div>
   </nav>
 
   <div class="container section">
-    <h1 style="margin-bottom: var(--space-8)">Furniture Gallery</h1>
+    <h1 class="u-mb-8">Furniture Gallery</h1>
 
     <div class="gallery-layout">
       <!-- Filter Sidebar -->
@@ -67,28 +81,34 @@
           <label class="filter-label"><input type="checkbox"> Oak</label>
           <label class="filter-label"><input type="checkbox"> Linen</label>
         </div>
-        <button class="btn btn--outline" style="width:100%">Apply Filters</button>
+        <button class="btn btn--outline u-w-full">Apply Filters</button>
       </aside>
 
       <!-- Product Grid -->
       <main>
-        <div style="margin-block-end: var(--space-4); display: flex; justify-content: space-between;">
+        <div class="u-flex u-justify-between u-items-center u-mb-4">
           <span>Showing 24 of 87 pieces</span>
-          <select aria-label="Sort products" style="border: 1px solid var(--color-border); padding: var(--space-2);">
+          <select aria-label="Sort products" class="form-input" style="width: auto;">
             <option>Featured</option>
             <option>Price: Low to High</option>
             <option>Price: High to Low</option>
           </select>
         </div>
 
-        <div class="grid grid--3-col">
+        <div class="product-grid">
           <!-- Card 1 -->
           <article class="product-card">
             <span class="product-card__badge" style="border-top: 3px solid var(--material-walnut)">Solid Walnut</span>
             <button class="product-card__wishlist" aria-label="Add to wishlist">♥</button>
             <a href="product.html" class="product-card__image-wrap" aria-label="View Malak Walnut Dining Table">
-              <img src="https://images.unsplash.com/photo-1577140917170-285929fb55b7?auto=format&fit=crop&w=400" alt="Malak Walnut Dining Table isolated" class="product-card__image product-card__image--main" loading="lazy">
-              <img src="https://images.unsplash.com/photo-1604578762246-41134e37f9cc?auto=format&fit=crop&w=400" alt="Malak Walnut Dining Table in room scene" class="product-card__image product-card__image--alt" loading="lazy">
+              <picture>
+                <source srcset="https://images.unsplash.com/photo-1577140917170-285929fb55b7?auto=format&fit=crop&w=400&fm=avif" type="image/avif">
+                <img src="https://images.unsplash.com/photo-1577140917170-285929fb55b7?auto=format&fit=crop&w=400" alt="Malak Walnut Dining Table isolated" class="product-card__image product-card__image--main" loading="lazy">
+              </picture>
+              <picture>
+                <source srcset="https://images.unsplash.com/photo-1604578762246-41134e37f9cc?auto=format&fit=crop&w=400&fm=avif" type="image/avif">
+                <img src="https://images.unsplash.com/photo-1604578762246-41134e37f9cc?auto=format&fit=crop&w=400" alt="Malak Walnut Dining Table in room scene" class="product-card__image product-card__image--alt" loading="lazy">
+              </picture>
             </a>
             <div class="product-card__info">
               <h2 class="product-card__title">Malak Dining Table</h2>
@@ -103,8 +123,14 @@
             <span class="product-card__badge" style="border-top: 3px solid var(--fabric-linen)">Linen</span>
             <button class="product-card__wishlist" aria-label="Add to wishlist">♥</button>
             <a href="product.html" class="product-card__image-wrap" aria-label="View Fayrouz Sofa">
-              <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=400" alt="Fayrouz Sofa isolated" class="product-card__image product-card__image--main" loading="lazy">
-              <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=400" alt="Fayrouz Sofa in room scene" class="product-card__image product-card__image--alt" loading="lazy">
+              <picture>
+                <source srcset="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=400&fm=avif" type="image/avif">
+                <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=400" alt="Fayrouz Sofa isolated" class="product-card__image product-card__image--main" loading="lazy">
+              </picture>
+              <picture>
+                <source srcset="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=400&fm=avif" type="image/avif">
+                <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=400" alt="Fayrouz Sofa in room scene" class="product-card__image product-card__image--alt" loading="lazy">
+              </picture>
             </a>
             <div class="product-card__info">
               <h2 class="product-card__title">Fayrouz Sofa</h2>
@@ -119,8 +145,14 @@
             <span class="product-card__badge" style="border-top: 3px solid var(--material-oak)">Solid Oak</span>
             <button class="product-card__wishlist" aria-label="Add to wishlist">♥</button>
             <a href="product.html" class="product-card__image-wrap" aria-label="View Cairo Bookshelf">
-              <img src="https://images.unsplash.com/photo-1594620302200-9a762244a156?auto=format&fit=crop&w=400" alt="Cairo Bookshelf isolated" class="product-card__image product-card__image--main" loading="lazy">
-              <img src="https://images.unsplash.com/photo-1507149833265-60c372daea22?auto=format&fit=crop&w=400" alt="Cairo Bookshelf in room scene" class="product-card__image product-card__image--alt" loading="lazy">
+              <picture>
+                <source srcset="https://images.unsplash.com/photo-1594620302200-9a762244a156?auto=format&fit=crop&w=400&fm=avif" type="image/avif">
+                <img src="https://images.unsplash.com/photo-1594620302200-9a762244a156?auto=format&fit=crop&w=400" alt="Cairo Bookshelf isolated" class="product-card__image product-card__image--main" loading="lazy">
+              </picture>
+              <picture>
+                <source srcset="https://images.unsplash.com/photo-1507149833265-60c372daea22?auto=format&fit=crop&w=400&fm=avif" type="image/avif">
+                <img src="https://images.unsplash.com/photo-1507149833265-60c372daea22?auto=format&fit=crop&w=400" alt="Cairo Bookshelf in room scene" class="product-card__image product-card__image--alt" loading="lazy">
+              </picture>
             </a>
             <div class="product-card__info">
               <h2 class="product-card__title">Cairo Bookshelf</h2>
@@ -130,11 +162,42 @@
             </div>
           </article>
         </div>
-        <div style="margin-block-start: var(--space-8); text-align: center;">
+        <div class="u-mt-8 u-text-center">
           <button class="btn btn--outline">Load More</button>
         </div>
       </main>
     </div>
   </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__title">Damietta Crafts</div>
+          <p class="u-text-secondary u-mb-6" style="max-width: 300px;">Handmade in Damietta, Egypt.</p>
+        </div>
+        <div>
+          <h3 class="u-mb-4">Shop</h3>
+          <ul class="footer__link-list">
+            <li><a href="gallery.html?room=living">Living Room</a></li>
+            <li><a href="collections.html">Collections</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <nav class="mobile-tab-bar">
+    <a href="index.html" class="mobile-tab-bar__item">
+      <span class="mobile-tab-bar__icon">🏠</span>
+      <span>Home</span>
+    </a>
+    <a href="gallery.html" class="mobile-tab-bar__item is-active">
+      <span class="mobile-tab-bar__icon">🛋️</span>
+      <span>Shop</span>
+    </a>
+  </nav>
+
+  <script src="../main.js"></script>
 </body>
 </html>

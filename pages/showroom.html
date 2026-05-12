@@ -10,24 +10,62 @@
   <link rel="stylesheet" href="../brand-personalities/artisan-heritage.css">
 </head>
 <body>
-  <nav style="padding: var(--space-6); background: var(--color-surface); border-bottom: 1px solid var(--color-border)">
-    <div class="nav__logo"><a href="index.html">Damietta Crafts</a></div>
+  <nav class="top-nav">
+    <div class="top-nav__logo">
+      <a href="index.html">Damietta Crafts</a>
+    </div>
+    <div class="top-nav__links">
+      <a href="gallery.html">Shop</a>
+      <a href="collections.html">Collections</a>
+      <a href="custom-order.html">Custom Orders</a>
+      <a href="about.html">About</a>
+      <a href="showroom.html">Showroom</a>
+    </div>
+    <div class="top-nav__actions">
+      <button class="top-nav__action" aria-label="Search">🔍</button>
+      <a href="#" class="top-nav__action" aria-label="Wishlist">♥</a>
+      <a href="#" class="top-nav__action" aria-label="Cart">🛒</a>
+    </div>
   </nav>
+
   <div class="container section">
-    <h1 style="text-align: center; margin-bottom: var(--space-8)">Our Showroom</h1>
+    <h1 class="u-text-center u-mb-8">Our Showroom</h1>
     <div class="grid grid--2-col">
       <div>
         <h2>Visit Us in Damietta</h2>
-        <p>Experience the craft in person. See the materials, feel the finishes, and consult with our experts.</p>
-        <p><strong>Address:</strong> 123 Heritage St, Damietta, Egypt</p>
-        <p><strong>Hours:</strong> Mon - Sat: 10:00 AM - 8:00 PM</p>
-        <button class="btn" style="margin-top: var(--space-4)">Book an Appointment</button>
+        <p class="u-mt-4 u-mb-4">Experience the craft in person. See the materials, feel the finishes, and consult with our experts.</p>
+        <p class="u-mb-2"><strong class="u-font-bold">Address:</strong> 123 Heritage St, Damietta, Egypt</p>
+        <p><strong class="u-font-bold">Hours:</strong> Mon - Sat: 10:00 AM - 8:00 PM</p>
+        <button class="btn u-mt-4">Book an Appointment</button>
       </div>
-      <div style="background: var(--color-border); aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; border-radius: var(--radius-md);">
+      <div class="u-aspect-16-9 u-flex u-items-center u-justify-center" style="background: var(--color-border); border-radius: var(--radius-md);">
         <!-- Virtual 360 embed placeholder -->
         <span>Virtual 360 Tour Placeholder</span>
       </div>
     </div>
   </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__title">Damietta Crafts</div>
+          <p class="u-text-secondary u-mb-6" style="max-width: 300px;">Handmade in Damietta, Egypt.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <nav class="mobile-tab-bar">
+    <a href="index.html" class="mobile-tab-bar__item">
+      <span class="mobile-tab-bar__icon">🏠</span>
+      <span>Home</span>
+    </a>
+    <a href="gallery.html" class="mobile-tab-bar__item">
+      <span class="mobile-tab-bar__icon">🛋️</span>
+      <span>Shop</span>
+    </a>
+  </nav>
+  <script src="../main.js"></script>
 </body>
 </html>

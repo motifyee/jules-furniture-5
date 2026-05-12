@@ -104,8 +104,22 @@
   </style>
 </head>
 <body>
-  <nav style="padding: var(--space-6); background: var(--color-surface); border-bottom: 1px solid var(--color-border)">
-    <div class="nav__logo"><a href="index.html">Damietta Crafts</a></div>
+  <nav class="top-nav">
+    <div class="top-nav__logo">
+      <a href="index.html">Damietta Crafts</a>
+    </div>
+    <div class="top-nav__links">
+      <a href="gallery.html">Shop</a>
+      <a href="collections.html">Collections</a>
+      <a href="custom-order.html">Custom Orders</a>
+      <a href="about.html">About</a>
+      <a href="showroom.html">Showroom</a>
+    </div>
+    <div class="top-nav__actions">
+      <button class="top-nav__action" aria-label="Search">🔍</button>
+      <a href="#" class="top-nav__action" aria-label="Wishlist">♥</a>
+      <a href="#" class="top-nav__action" aria-label="Cart">🛒</a>
+    </div>
   </nav>
 
   <div class="container section">
@@ -119,7 +133,9 @@
     <div class="pdp-layout">
       <!-- Gallery -->
       <div class="pdp-gallery" role="region" aria-label="Product photos">
-        <img src="https://images.unsplash.com/photo-1604578762246-41134e37f9cc?auto=format&fit=crop&w=1000" alt="Malak Walnut Dining Table shown in styled dining room" class="pdp-gallery__main" id="main-image">
+        <picture>
+          <img src="https://images.unsplash.com/photo-1604578762246-41134e37f9cc?auto=format&fit=crop&w=1000" alt="Malak Walnut Dining Table shown in styled dining room" class="pdp-gallery__main" id="main-image">
+        </picture>
         <div class="pdp-gallery__thumbs">
           <img src="https://images.unsplash.com/photo-1604578762246-41134e37f9cc?auto=format&fit=crop&w=200" alt="Thumbnail 1: Lifestyle" class="pdp-gallery__thumb" aria-current="true" tabindex="0">
           <img src="https://images.unsplash.com/photo-1577140917170-285929fb55b7?auto=format&fit=crop&w=200" alt="Thumbnail 2: Studio isolated" class="pdp-gallery__thumb" tabindex="0">
@@ -130,41 +146,47 @@
       <!-- Info -->
       <div class="pdp-info">
         <span class="product-card__badge" style="position:relative; top:0; left:0; display:inline-block; margin-block-end:var(--space-4); border-top: 3px solid var(--material-walnut)">Solid Walnut</span>
-        <h1 style="font-size: var(--text-4xl); margin-block-end: var(--space-2)">Malak Dining Table</h1>
-        <p style="font-size: var(--text-lg); color: var(--color-text-secondary); margin-block-end: var(--space-4)">A solid walnut table built for meals that last for hours and pieces that last for decades.</p>
+        <h1 class="u-mb-2" style="font-size: var(--text-4xl);">Malak Dining Table</h1>
+        <p class="u-text-secondary u-mb-4" style="font-size: var(--text-lg);">A solid walnut table built for meals that last for hours and pieces that last for decades.</p>
 
-        <div style="display:flex; align-items:center; gap:var(--space-2); margin-block-end:var(--space-6)">
+        <div class="u-flex u-items-center u-gap-2 u-mb-6">
           <span style="color:var(--color-accent)">★★★★★</span>
           <a href="#reviews" style="font-size:var(--text-sm)">4.8 (24 reviews)</a>
         </div>
 
-        <div style="font-size: var(--text-3xl); font-weight: bold; margin-block-end: var(--space-2)">EGP 24,000</div>
-        <div style="font-size: var(--text-sm); color: var(--color-text-secondary); margin-block-end: var(--space-6)">Or pay in 6 installments of 4,000 EGP via Vodafone Cash or InstaPay.</div>
+        <div class="u-font-bold u-mb-2" style="font-size: var(--text-3xl);">EGP 24,000</div>
+        <div class="u-text-secondary u-mb-6" style="font-size: var(--text-sm);">Or pay in 6 installments of 4,000 EGP via Vodafone Cash or InstaPay.</div>
 
-        <div style="margin-block-end: var(--space-6)">
-          <div style="font-family: var(--font-label); text-transform: uppercase; font-size: var(--text-sm); margin-block-end: var(--space-2)">Size</div>
-          <div style="display:flex; gap:var(--space-2)">
+        <div class="u-mb-6">
+          <div class="form-label u-mb-2" style="text-transform: uppercase;">Size</div>
+          <div class="u-flex u-gap-2">
             <button class="btn btn--outline" aria-pressed="false">160cm (Seats 6)</button>
             <button class="btn" aria-pressed="true">180cm (Seats 8)</button>
             <button class="btn btn--outline" aria-pressed="false">200cm (Seats 10)</button>
           </div>
-          <a href="custom-order.html" style="font-size: var(--text-sm); display:inline-block; margin-block-start: var(--space-2)">Need a custom size?</a>
+          <a href="custom-order.html" class="u-mt-2 u-text-secondary" style="font-size: var(--text-sm); display:inline-block;">Need a custom size?</a>
         </div>
 
-        <div style="margin-block-end: var(--space-8)">
-          <div style="font-family: var(--font-label); text-transform: uppercase; font-size: var(--text-sm); margin-block-end: var(--space-2)">Material</div>
+        <div class="u-mb-8">
+          <div class="form-label u-mb-2" style="text-transform: uppercase;">Material</div>
           <div class="swatch-grid" role="radiogroup" aria-label="Select Material">
             <div class="swatch-item" role="radio" aria-checked="true" aria-label="Solid Walnut" tabindex="0">
-              <img src="https://images.unsplash.com/photo-1546484475-7f7bd55792da?auto=format&fit=crop&w=100" alt="Solid Walnut texture swatch">
+              <picture>
+                <source srcset="https://images.unsplash.com/photo-1546484475-7f7bd55792da?auto=format&fit=crop&w=100&fm=avif" type="image/avif">
+                <img src="https://images.unsplash.com/photo-1546484475-7f7bd55792da?auto=format&fit=crop&w=100" alt="Solid Walnut texture swatch">
+              </picture>
             </div>
             <div class="swatch-item" role="radio" aria-checked="false" aria-label="Solid Oak" tabindex="0">
-              <img src="https://images.unsplash.com/photo-1546484396-fb3fc6f95f98?auto=format&fit=crop&w=100" alt="Solid Oak texture swatch">
+              <picture>
+                <source srcset="https://images.unsplash.com/photo-1546484396-fb3fc6f95f98?auto=format&fit=crop&w=100&fm=avif" type="image/avif">
+                <img src="https://images.unsplash.com/photo-1546484396-fb3fc6f95f98?auto=format&fit=crop&w=100" alt="Solid Oak texture swatch">
+              </picture>
             </div>
           </div>
         </div>
 
-        <button class="btn" style="width: 100%; margin-block-end: var(--space-4)">Add to Cart</button>
-        <button class="btn btn--outline" style="width: 100%; margin-block-end: var(--space-6)">Save to Wishlist</button>
+        <button class="btn u-w-full u-mb-4">Add to Cart</button>
+        <button class="btn btn--outline u-w-full u-mb-6">Save to Wishlist</button>
 
         <!-- Trust Strip -->
         <div class="trust-strip">
@@ -178,9 +200,9 @@
             <span>✨</span> 2-year warranty
           </div>
         </div>
-        <p style="font-size: var(--text-sm); color: var(--color-text-secondary); margin-block-start: var(--space-2)">If it doesn't fit your space, we'll arrange pickup within 30 days.</p>
+        <p class="u-text-secondary u-mt-2" style="font-size: var(--text-sm);">If it doesn't fit your space, we'll arrange pickup within 30 days.</p>
 
-        <div style="margin-block-start: var(--space-8)">
+        <div class="u-mt-8">
           <details>
             <summary>Dimensions & Fit</summary>
             <div style="padding-block: var(--space-4)">
@@ -190,11 +212,11 @@
                   <rect x="50" y="50" width="300" height="20" fill="none" stroke="currentColor" stroke-width="2"/>
                   <rect x="70" y="70" width="20" height="100" fill="none" stroke="currentColor" stroke-width="2"/>
                   <rect x="310" y="70" width="20" height="100" fill="none" stroke="currentColor" stroke-width="2"/>
-                  <text x="200" y="40" text-anchor="middle" font-family="sans-serif" font-size="12">W: 180cm</text>
-                  <text x="30" y="120" text-anchor="end" font-family="sans-serif" font-size="12">H: 76cm</text>
+                  <text x="200" y="40" text-anchor="middle" font-family="sans-serif" font-size="12" fill="currentColor">W: 180cm</text>
+                  <text x="30" y="120" text-anchor="end" font-family="sans-serif" font-size="12" fill="currentColor">H: 76cm</text>
                 </svg>
               </div>
-              <p style="margin-block-start: var(--space-4)"><strong>Fits through a standard 80cm doorway.</strong></p>
+              <p class="u-mt-4 u-font-bold">Fits through a standard 80cm doorway.</p>
             </div>
           </details>
           <details>
@@ -226,8 +248,53 @@
     </div>
   </div>
 
+  <div class="sticky-cart-bar">
+    <div class="u-flex u-items-center u-gap-4">
+      <img src="https://images.unsplash.com/photo-1577140917170-285929fb55b7?auto=format&fit=crop&w=100" alt="" style="width: 32px; height: 32px; border-radius: 4px;">
+      <div>
+        <div style="font-family: var(--font-label); font-weight: bold;">Malak Dining Table</div>
+        <div style="font-size: 12px; color: var(--color-text-secondary);">Solid Walnut</div>
+      </div>
+    </div>
+    <div class="u-flex u-items-center u-gap-4">
+      <div class="u-font-bold">EGP 24,000</div>
+      <button class="btn">Add to Cart</button>
+    </div>
+  </div>
+
   <a href="https://wa.me/201000000000" class="consult-widget" aria-label="Chat with us on WhatsApp">
     💬 Chat with an Expert
   </a>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__title">Damietta Crafts</div>
+          <p class="u-text-secondary u-mb-6" style="max-width: 300px;">Handmade in Damietta, Egypt.</p>
+        </div>
+        <div>
+          <h3 class="u-mb-4">Shop</h3>
+          <ul class="footer__link-list">
+            <li><a href="gallery.html?room=living">Living Room</a></li>
+            <li><a href="collections.html">Collections</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <nav class="mobile-tab-bar">
+    <a href="index.html" class="mobile-tab-bar__item">
+      <span class="mobile-tab-bar__icon">🏠</span>
+      <span>Home</span>
+    </a>
+    <a href="gallery.html" class="mobile-tab-bar__item">
+      <span class="mobile-tab-bar__icon">🛋️</span>
+      <span>Shop</span>
+    </a>
+  </nav>
+
+  <script src="../main.js"></script>
 </body>
 </html>

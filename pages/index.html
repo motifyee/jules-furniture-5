@@ -7,12 +7,9 @@
   <link rel="stylesheet" href="../base.css">
   <link rel="stylesheet" href="../layout.css">
   <link rel="stylesheet" href="../components.css">
-  <!-- Personality override example -->
   <link rel="stylesheet" href="../brand-personalities/artisan-heritage.css">
-  <!-- RTL Support (Disabled by default, toggle dir="rtl" to enable) -->
   <link rel="stylesheet" href="../rtl.css">
   <style>
-    /* Inline specific to index */
     .hero {
       min-height: 100vh;
       display: flex;
@@ -71,43 +68,45 @@
       border-radius: var(--radius-md);
       margin-block-end: var(--space-4);
     }
-    .nav {
-      position: absolute;
-      top: 0; left: 0; width: 100%;
-      z-index: 10;
-      padding: var(--space-6);
-      display: flex;
-      justify-content: space-between;
-      color: #fff;
-    }
-    .nav a {
-      color: #fff;
-    }
-    .nav__links {
-      display: flex;
-      gap: var(--space-6);
-    }
   </style>
 </head>
 <body>
-  <nav class="nav">
-    <div class="nav__logo">Damietta Crafts</div>
-    <div class="nav__links">
+  <nav class="top-nav top-nav--transparent">
+    <div class="top-nav__logo">
+      <a href="index.html">Damietta Crafts</a>
+    </div>
+    <div class="top-nav__links">
       <a href="gallery.html">Shop</a>
       <a href="collections.html">Collections</a>
       <a href="custom-order.html">Custom Orders</a>
       <a href="about.html">About</a>
+      <a href="showroom.html">Showroom</a>
+    </div>
+    <div class="top-nav__actions">
+      <button class="top-nav__action" aria-label="Search">🔍</button>
+      <a href="#" class="top-nav__action" aria-label="Wishlist">
+        ♥
+        <span class="top-nav__action-badge">2</span>
+      </a>
+      <a href="#" class="top-nav__action" aria-label="Cart">
+        🛒
+        <span class="top-nav__action-badge">1</span>
+      </a>
+      <button class="top-nav__action" aria-label="Toggle Language" onclick="document.documentElement.dir = document.documentElement.dir === 'rtl' ? 'ltr' : 'rtl';">🌐</button>
     </div>
   </nav>
 
   <header class="hero">
-    <!-- LCP image should be preloaded, eager -->
-    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=2000" alt="Styled living room with Damietta furniture" class="hero__bg" loading="eager">
+    <picture>
+      <source srcset="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=2000&fm=avif" type="image/avif">
+      <source srcset="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=2000&fm=webp" type="image/webp">
+      <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=2000" alt="Styled living room with Damietta furniture" class="hero__bg" loading="eager">
+    </picture>
     <div class="hero__overlay"></div>
     <div class="container hero__content">
       <h1 class="hero__title">Crafted in Damietta. Built for a lifetime.</h1>
-      <p class="hero__subtitle">Where world-class woodworking meets Egyptian heritage.</p>
-      <div style="margin-top: var(--space-6)">
+      <p class="u-text-lg u-mb-6">Where world-class woodworking meets Egyptian heritage.</p>
+      <div class="u-flex u-gap-4">
         <a href="gallery.html" class="btn">Explore the Collection</a>
         <a href="showroom.html" class="btn btn--outline" style="color:#fff; border-color:#fff">Book a Showroom Visit</a>
       </div>
@@ -121,24 +120,36 @@
   </section>
 
   <section class="section container">
-    <h2 style="margin-bottom: var(--space-8)">Shop by Room</h2>
+    <h2 class="u-mb-8">Shop by Room</h2>
     <div class="grid grid--3-col">
       <a href="gallery.html?room=living" class="category-tile">
-        <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=600" alt="Living Room" loading="lazy">
+        <picture>
+          <source srcset="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=600&fm=avif" type="image/avif">
+          <source srcset="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=600&fm=webp" type="image/webp">
+          <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=600" alt="Living Room" loading="lazy">
+        </picture>
         <div class="category-tile__content">
           <h3 class="category-tile__title">Living Room</h3>
           <p>24 Pieces</p>
         </div>
       </a>
       <a href="gallery.html?room=bedroom" class="category-tile">
-        <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&w=600" alt="Bedroom" loading="lazy">
+        <picture>
+          <source srcset="https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&w=600&fm=avif" type="image/avif">
+          <source srcset="https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&w=600&fm=webp" type="image/webp">
+          <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&w=600" alt="Bedroom" loading="lazy">
+        </picture>
         <div class="category-tile__content">
           <h3 class="category-tile__title">Bedroom</h3>
           <p>18 Pieces</p>
         </div>
       </a>
       <a href="gallery.html?room=dining" class="category-tile">
-        <img src="https://images.unsplash.com/photo-1617806118233-18e1c094f129?auto=format&fit=crop&w=600" alt="Dining Room" loading="lazy">
+        <picture>
+          <source srcset="https://images.unsplash.com/photo-1617806118233-18e1c094f129?auto=format&fit=crop&w=600&fm=avif" type="image/avif">
+          <source srcset="https://images.unsplash.com/photo-1617806118233-18e1c094f129?auto=format&fit=crop&w=600&fm=webp" type="image/webp">
+          <img src="https://images.unsplash.com/photo-1617806118233-18e1c094f129?auto=format&fit=crop&w=600" alt="Dining Room" loading="lazy">
+        </picture>
         <div class="category-tile__content">
           <h3 class="category-tile__title">Dining Room</h3>
           <p>32 Pieces</p>
@@ -148,25 +159,248 @@
   </section>
 
   <section class="section container">
-    <h2 style="margin-bottom: var(--space-8)">Made in Damietta. Known to the world.</h2>
-    <div class="craft-story">
-      <div class="craft-story__step">
-        <img src="https://images.unsplash.com/photo-1563453392212-326f5e854473?auto=format&fit=crop&w=500" alt="Timber selection" loading="lazy">
-        <h3>1. The Material</h3>
-        <p>We source only the finest solid woods, inspected grain by grain.</p>
-      </div>
-      <div class="craft-story__step">
-        <img src="https://images.unsplash.com/photo-1505069270275-c0817b3eb164?auto=format&fit=crop&w=500" alt="Joinery" loading="lazy">
-        <h3>2. The Making</h3>
-        <p>Decades of master craftsmanship in every mortise and tenon.</p>
-      </div>
-      <div class="craft-story__step">
-        <img src="https://images.unsplash.com/photo-1594026112284-02bb6f3352fe?auto=format&fit=crop&w=500" alt="Finished piece" loading="lazy">
-        <h3>3. The Piece</h3>
-        <p>A heritage piece, delivered and assembled in your home.</p>
+    <div class="grid grid--2-col u-items-center">
+      <picture>
+        <source srcset="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&fm=avif" type="image/avif">
+        <source srcset="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&fm=webp" type="image/webp">
+        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800" alt="The Fayrouz Collection" loading="lazy" class="u-w-full" style="border-radius: var(--radius-lg)">
+      </picture>
+      <div>
+        <h2 class="u-mb-4">The Fayrouz Collection</h2>
+        <p class="u-mb-6">Sourced from sustainable European oak and finished with our signature hand-rubbed oil. The Fayrouz collection embodies the pure intersection of Egyptian craftsmanship and minimalist philosophy.</p>
+        <div class="u-flex u-gap-4">
+          <a href="collections.html" class="btn">View Collection</a>
+          <a href="custom-order.html" class="btn btn--outline">Request Custom Order</a>
+        </div>
       </div>
     </div>
   </section>
 
+  <section class="section container">
+    <h2 class="u-mb-8">Made in Damietta. Known to the world.</h2>
+    <div class="craft-story">
+      <div class="craft-story__step">
+        <picture>
+          <source srcset="https://images.unsplash.com/photo-1563453392212-326f5e854473?auto=format&fit=crop&w=500&fm=avif" type="image/avif">
+          <source srcset="https://images.unsplash.com/photo-1563453392212-326f5e854473?auto=format&fit=crop&w=500&fm=webp" type="image/webp">
+          <img src="https://images.unsplash.com/photo-1563453392212-326f5e854473?auto=format&fit=crop&w=500" alt="Timber selection" loading="lazy">
+        </picture>
+        <h3 class="u-mb-2">1. Raw Material</h3>
+        <p>We source only the finest solid woods, inspecting every board for grain integrity before it enters the workshop.</p>
+      </div>
+      <div class="craft-story__step">
+        <picture>
+          <source srcset="https://images.unsplash.com/photo-1505069270275-c0817b3eb164?auto=format&fit=crop&w=500&fm=avif" type="image/avif">
+          <source srcset="https://images.unsplash.com/photo-1505069270275-c0817b3eb164?auto=format&fit=crop&w=500&fm=webp" type="image/webp">
+          <img src="https://images.unsplash.com/photo-1505069270275-c0817b3eb164?auto=format&fit=crop&w=500" alt="Joinery" loading="lazy">
+        </picture>
+        <h3 class="u-mb-2">2. The Making</h3>
+        <p>Decades of master craftsmanship from Damietta's artisans poured into every hand-cut mortise and tenon.</p>
+      </div>
+      <div class="craft-story__step">
+        <picture>
+          <source srcset="https://images.unsplash.com/photo-1594026112284-02bb6f3352fe?auto=format&fit=crop&w=500&fm=avif" type="image/avif">
+          <source srcset="https://images.unsplash.com/photo-1594026112284-02bb6f3352fe?auto=format&fit=crop&w=500&fm=webp" type="image/webp">
+          <img src="https://images.unsplash.com/photo-1594026112284-02bb6f3352fe?auto=format&fit=crop&w=500" alt="Finished piece" loading="lazy">
+        </picture>
+        <h3 class="u-mb-2">3. The Piece</h3>
+        <p>A heritage piece, delivered and assembled in your home by our white-glove team.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div class="u-flex u-justify-between u-items-center u-mb-8">
+      <h2>Bestsellers</h2>
+      <a href="gallery.html" class="btn btn--outline">View All Products →</a>
+    </div>
+    <div class="product-grid">
+      <!-- Card 1 -->
+      <article class="product-card">
+        <span class="product-card__badge" style="border-top: 3px solid var(--material-walnut)">Solid Walnut</span>
+        <button class="product-card__wishlist" aria-label="Add to wishlist">♥</button>
+        <a href="product.html" class="product-card__image-wrap" aria-label="View Malak Walnut Dining Table">
+          <picture>
+            <source srcset="https://images.unsplash.com/photo-1577140917170-285929fb55b7?auto=format&fit=crop&w=400&fm=avif" type="image/avif">
+            <img src="https://images.unsplash.com/photo-1577140917170-285929fb55b7?auto=format&fit=crop&w=400" alt="Malak Walnut Dining Table isolated" class="product-card__image product-card__image--main" loading="lazy">
+          </picture>
+          <picture>
+            <source srcset="https://images.unsplash.com/photo-1604578762246-41134e37f9cc?auto=format&fit=crop&w=400&fm=avif" type="image/avif">
+            <img src="https://images.unsplash.com/photo-1604578762246-41134e37f9cc?auto=format&fit=crop&w=400" alt="Malak Walnut Dining Table in room scene" class="product-card__image product-card__image--alt" loading="lazy">
+          </picture>
+        </a>
+        <div class="product-card__info">
+          <h3 class="product-card__title">Malak Dining Table</h3>
+          <p class="product-card__material">Solid Walnut, Matte Oil</p>
+          <p class="product-card__price">EGP 24,000</p>
+          <button class="btn product-card__quick-add">Quick View</button>
+        </div>
+      </article>
+      <!-- Card 2 -->
+      <article class="product-card">
+        <span class="product-card__badge" style="border-top: 3px solid var(--fabric-linen)">Linen</span>
+        <button class="product-card__wishlist" aria-label="Add to wishlist">♥</button>
+        <a href="product.html" class="product-card__image-wrap" aria-label="View Fayrouz Sofa">
+          <picture>
+            <source srcset="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=400&fm=avif" type="image/avif">
+            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=400" alt="Fayrouz Sofa isolated" class="product-card__image product-card__image--main" loading="lazy">
+          </picture>
+          <picture>
+            <source srcset="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=400&fm=avif" type="image/avif">
+            <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=400" alt="Fayrouz Sofa in room scene" class="product-card__image product-card__image--alt" loading="lazy">
+          </picture>
+        </a>
+        <div class="product-card__info">
+          <h3 class="product-card__title">Fayrouz Sofa</h3>
+          <p class="product-card__material">Natural Linen, Oak Frame</p>
+          <p class="product-card__price">EGP 32,500</p>
+          <button class="btn product-card__quick-add">Quick View</button>
+        </div>
+      </article>
+      <!-- Card 3 -->
+      <article class="product-card">
+        <span class="product-card__badge" style="border-top: 3px solid var(--material-oak)">Solid Oak</span>
+        <button class="product-card__wishlist" aria-label="Add to wishlist">♥</button>
+        <a href="product.html" class="product-card__image-wrap" aria-label="View Cairo Bookshelf">
+          <picture>
+            <source srcset="https://images.unsplash.com/photo-1594620302200-9a762244a156?auto=format&fit=crop&w=400&fm=avif" type="image/avif">
+            <img src="https://images.unsplash.com/photo-1594620302200-9a762244a156?auto=format&fit=crop&w=400" alt="Cairo Bookshelf isolated" class="product-card__image product-card__image--main" loading="lazy">
+          </picture>
+          <picture>
+            <source srcset="https://images.unsplash.com/photo-1507149833265-60c372daea22?auto=format&fit=crop&w=400&fm=avif" type="image/avif">
+            <img src="https://images.unsplash.com/photo-1507149833265-60c372daea22?auto=format&fit=crop&w=400" alt="Cairo Bookshelf in room scene" class="product-card__image product-card__image--alt" loading="lazy">
+          </picture>
+        </a>
+        <div class="product-card__info">
+          <h3 class="product-card__title">Cairo Bookshelf</h3>
+          <p class="product-card__material">Solid Oak</p>
+          <p class="product-card__price">EGP 18,000</p>
+          <button class="btn product-card__quick-add">Quick View</button>
+        </div>
+      </article>
+      <!-- Card 4 -->
+      <article class="product-card">
+        <span class="product-card__badge" style="border-top: 3px solid var(--material-pine)">Solid Pine</span>
+        <button class="product-card__wishlist" aria-label="Add to wishlist">♥</button>
+        <a href="product.html" class="product-card__image-wrap" aria-label="View Alexandria Bed">
+          <picture>
+            <source srcset="https://images.unsplash.com/photo-1505693314120-0d443867891c?auto=format&fit=crop&w=400&fm=avif" type="image/avif">
+            <img src="https://images.unsplash.com/photo-1505693314120-0d443867891c?auto=format&fit=crop&w=400" alt="Alexandria Bed isolated" class="product-card__image product-card__image--main" loading="lazy">
+          </picture>
+          <picture>
+            <source srcset="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=400&fm=avif" type="image/avif">
+            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=400" alt="Alexandria Bed in room scene" class="product-card__image product-card__image--alt" loading="lazy">
+          </picture>
+        </a>
+        <div class="product-card__info">
+          <h3 class="product-card__title">Alexandria Bed</h3>
+          <p class="product-card__material">Solid Pine</p>
+          <p class="product-card__price">EGP 21,000</p>
+          <button class="btn product-card__quick-add">Quick View</button>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" style="background-color: var(--color-surface-raised)">
+    <div class="container u-text-center">
+      <h2 class="u-mb-4">Not sure where to start?</h2>
+      <p class="u-mb-8">Tell us about your space. We'll find the right pieces.</p>
+      <div class="u-flex u-justify-center u-gap-4 u-mb-8">
+        <div style="width: 100px; height: 100px; border: 2px solid var(--color-border); display: flex; align-items: center; justify-content: center; border-radius: var(--radius-md)">Room</div>
+        <div style="width: 100px; height: 100px; border: 2px solid var(--color-border); display: flex; align-items: center; justify-content: center; border-radius: var(--radius-md)">Style</div>
+        <div style="width: 100px; height: 100px; border: 2px solid var(--color-border); display: flex; align-items: center; justify-content: center; border-radius: var(--radius-md)">Budget</div>
+      </div>
+      <a href="room-builder.html" class="btn">Start the Room Finder</a>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div class="grid grid--2-col u-items-center form-card" style="padding: 0; overflow: hidden;">
+      <picture>
+        <source srcset="https://images.unsplash.com/photo-1611149454157-b45281ea62cd?auto=format&fit=crop&w=600&fm=avif" type="image/avif">
+        <img src="https://images.unsplash.com/photo-1611149454157-b45281ea62cd?auto=format&fit=crop&w=600" alt="Woodworking detail" loading="lazy" class="u-aspect-16-9" style="height: 100%;">
+      </picture>
+      <div style="padding: var(--space-10)">
+        <h2 class="u-mb-4">Have a vision? We'll build it exactly.</h2>
+        <ul class="u-mb-8" style="list-style-position: inside;">
+          <li>Dimensions to your spec</li>
+          <li>Material + finish selection</li>
+          <li>Direct from maker — no middleman premium</li>
+        </ul>
+        <a href="custom-order.html" class="btn">Request Custom Order</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__title">Damietta Crafts</div>
+          <p class="u-text-secondary u-mb-6" style="max-width: 300px;">Handmade in Damietta, Egypt. Bringing world-class woodworking and heritage craftsmanship to your home.</p>
+          <div class="footer__badge">Handmade in Damietta</div>
+        </div>
+        <div>
+          <h3 class="u-mb-4">Shop</h3>
+          <ul class="footer__link-list">
+            <li><a href="gallery.html?room=living">Living Room</a></li>
+            <li><a href="gallery.html?room=bedroom">Bedroom</a></li>
+            <li><a href="gallery.html?room=dining">Dining Room</a></li>
+            <li><a href="collections.html">Collections</a></li>
+            <li><a href="custom-order.html">Custom Orders</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="u-mb-4">Brand</h3>
+          <ul class="footer__link-list">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="journal.html">Journal</a></li>
+            <li><a href="showroom.html">Showroom</a></li>
+            <li><a href="contact.html">Trade & Wholesale</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="u-mb-4">Help</h3>
+          <ul class="footer__link-list">
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="#">Shipping & Returns</a></li>
+            <li><a href="#">Care Guide</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div>&copy; 2024 Damietta Heritage Furniture. All rights reserved.</div>
+        <div class="u-flex u-gap-4">
+          <span>💳 Visa / Mastercard</span>
+          <span>💳 Vodafone Cash</span>
+          <span>💳 InstaPay</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <nav class="mobile-tab-bar">
+    <a href="index.html" class="mobile-tab-bar__item is-active">
+      <span class="mobile-tab-bar__icon">🏠</span>
+      <span>Home</span>
+    </a>
+    <a href="gallery.html" class="mobile-tab-bar__item">
+      <span class="mobile-tab-bar__icon">🛋️</span>
+      <span>Shop</span>
+    </a>
+    <a href="room-builder.html" class="mobile-tab-bar__item">
+      <span class="mobile-tab-bar__icon">✨</span>
+      <span>Quiz</span>
+    </a>
+    <a href="#" class="mobile-tab-bar__item">
+      <span class="mobile-tab-bar__icon">🛒</span>
+      <span>Cart (1)</span>
+    </a>
+  </nav>
+
+  <script src="../main.js"></script>
 </body>
 </html>

@@ -10,29 +10,73 @@
   <link rel="stylesheet" href="../brand-personalities/artisan-heritage.css">
 </head>
 <body>
-  <nav style="padding: var(--space-6); background: var(--color-surface); border-bottom: 1px solid var(--color-border)">
-    <div class="nav__logo"><a href="index.html">Damietta Crafts</a></div>
+  <nav class="top-nav">
+    <div class="top-nav__logo">
+      <a href="index.html">Damietta Crafts</a>
+    </div>
+    <div class="top-nav__links">
+      <a href="gallery.html">Shop</a>
+      <a href="collections.html">Collections</a>
+      <a href="custom-order.html">Custom Orders</a>
+      <a href="about.html">About</a>
+      <a href="showroom.html">Showroom</a>
+    </div>
+    <div class="top-nav__actions">
+      <button class="top-nav__action" aria-label="Search">🔍</button>
+      <a href="#" class="top-nav__action" aria-label="Wishlist">♥</a>
+      <a href="#" class="top-nav__action" aria-label="Cart">🛒</a>
+    </div>
   </nav>
+
   <div class="container section">
-    <h1 style="margin-bottom: var(--space-8)">Journal & Guides</h1>
+    <h1 class="u-mb-8">Journal & Guides</h1>
     <div class="grid grid--2-col">
       <div style="background: var(--color-surface); border-radius: var(--radius-md); overflow: hidden;">
-        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800" alt="Wood care guide">
+        <picture>
+          <source srcset="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&fm=avif" type="image/avif">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800" alt="Wood care guide" loading="lazy">
+        </picture>
         <div style="padding: var(--space-6)">
           <h2>The Solid Wood Care Guide</h2>
-          <p style="margin-bottom: var(--space-4)">How to maintain your walnut pieces to last a lifetime.</p>
-          <a href="#" style="color: var(--color-accent); font-weight: bold;">Read Article →</a>
+          <p class="u-mb-4">How to maintain your walnut pieces to last a lifetime.</p>
+          <a href="#" style="color: var(--color-accent); font-weight: bold; text-decoration: none;">Read Article →</a>
         </div>
       </div>
       <div style="background: var(--color-surface); border-radius: var(--radius-md); overflow: hidden;">
-        <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800" alt="Interior styling">
+        <picture>
+          <source srcset="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800&fm=avif" type="image/avif">
+          <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800" alt="Interior styling" loading="lazy">
+        </picture>
         <div style="padding: var(--space-6)">
           <h2>Styling with Neutrals</h2>
-          <p style="margin-bottom: var(--space-4)">Balancing warm wood tones with minimalist fabrics.</p>
-          <a href="#" style="color: var(--color-accent); font-weight: bold;">Read Article →</a>
+          <p class="u-mb-4">Balancing warm wood tones with minimalist fabrics.</p>
+          <a href="#" style="color: var(--color-accent); font-weight: bold; text-decoration: none;">Read Article →</a>
         </div>
       </div>
     </div>
   </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__title">Damietta Crafts</div>
+          <p class="u-text-secondary u-mb-6" style="max-width: 300px;">Handmade in Damietta, Egypt.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <nav class="mobile-tab-bar">
+    <a href="index.html" class="mobile-tab-bar__item">
+      <span class="mobile-tab-bar__icon">🏠</span>
+      <span>Home</span>
+    </a>
+    <a href="gallery.html" class="mobile-tab-bar__item">
+      <span class="mobile-tab-bar__icon">🛋️</span>
+      <span>Shop</span>
+    </a>
+  </nav>
+  <script src="../main.js"></script>
 </body>
 </html>
